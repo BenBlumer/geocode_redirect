@@ -1,3 +1,4 @@
+# Geocode redirect
 This is a webservice that allows one to query a list of 3rd-party servers for
 geocode information for a given address.
 
@@ -6,7 +7,7 @@ In this document:
 2) Using this API.
 3) Adding more 3rd-party geocode servers.
 
-1.) Launching the server.
+## 1.) Launching the server.
 
 Step 1. Ensure you have Flask (http://flask.pocoo.org/) installed. If you're using
  Linux, this can be done using 
@@ -23,19 +24,19 @@ Note: By default this serves on http://localhost:5000/get_lat_long/. This can
 be modified in main.py's get_lat_and_long function.
 
 
-2.) Using this API.
+## 2.) Using this API.
 
 Simply GET 
-<server's address>/get_lat_long/<street address>
+`<server's address>/get_lat_long/<street address>`
 
-Where the street address is of the form "1100+w+6th+avenue+Vancouver" and the
-default server address is http://localhost:5000/.
+Where the street address is of the form `1100+w+6th+avenue+Vancouver` and the
+default server address is `http://localhost:5000/`.
 
 The return is a JSON object with two fields: Latitude and Longitude. The value
 returned corresponds to the first result of the first server succesfully
-contacted. 
+queried. 
 
-3.) Adding more 3rd-party geocode servers.
+## 3.) Adding more 3rd-party geocode servers.
 The scheme is to create a function that will query the third party server and
 return data as a json object with the two fields, Latitude and Longitude. 
 
