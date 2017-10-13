@@ -11,13 +11,16 @@ In this document:
 
 Step 1. Ensure you have Flask (http://flask.pocoo.org/) installed. If you're using
  Linux, this can be done using 
+
 `sudo pip install flask`
 
-Step 2. Run main.py. 
+Step 2. Run main.py:
+
 `python main.py`
 
 Step 3. If you have curl installed, with default options, you can test by
  running
+
 `curl -i http://localhost:5000/get_lat_long/1100+w+6th+ave+vancouver`
 
 Note: By default this serves on http://localhost:5000/get_lat_long/. This can
@@ -40,6 +43,6 @@ queried.
 The scheme is to create a function that will query the third party server and
 return data as a json object with the two fields, Latitude and Longitude. 
 
-Then add this function to server_function_calls in the lat_and_long function.
+Then add this function to `server_function_calls` in the `lat_and_long` function.
 
-(for example, checkout call_google or call_here).
+(for example, checkout `call_google` or `call_here`).
